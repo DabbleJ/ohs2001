@@ -230,7 +230,7 @@ const Index = () => {
               July 24–25, 2026 • Olympia, Washington
             </Badge>
             <h1 className="max-w-3xl text-5xl font-black leading-[0.96] tracking-tight text-[#062B55] sm:text-6xl lg:text-7xl">
-              25th Reunion Weekend
+              25th OHS Reunion Weekend
             </h1>
             <p className="mt-6 max-w-2xl text-2xl font-extrabold text-slate-700">Reconnect. Reminisce. Celebrate 25 Years.</p>
             <p className="mt-4 max-w-xl text-lg leading-8 text-slate-600">
