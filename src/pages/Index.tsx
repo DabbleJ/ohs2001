@@ -177,7 +177,7 @@ const Index = () => {
           <button onClick={() => scrollTo("#home")} className="flex items-center gap-3 text-left" aria-label="Go to top">
             <img src="/assets/reunion-badge.png" alt="OHS Class of 2001 reunion badge" className="h-11 w-11 rounded-2xl object-cover shadow-sm" />
             <span className="leading-tight">
-              <span className="block text-sm font-black uppercase tracking-[0.18em] text-[#003B7A]">OHS 2001</span>
+              <span className="block text-sm font-black uppercase tracking-[0.08em] text-[#003B7A]">Olympia High School | Class of 2001</span>
               <span className="block text-xs font-semibold text-slate-500">25th Reunion Weekend</span>
             </span>
           </button>
@@ -230,8 +230,7 @@ const Index = () => {
               July 24–25, 2026 • Olympia, Washington
             </Badge>
             <h1 className="max-w-3xl text-5xl font-black leading-[0.96] tracking-tight text-[#062B55] sm:text-6xl lg:text-7xl">
-              Olympia High School Class of 2001
-              <span className="mt-2 block text-[#003B7A]">25th Reunion Weekend</span>
+              25th Reunion Weekend
             </h1>
             <p className="mt-6 max-w-2xl text-2xl font-extrabold text-slate-700">Reconnect. Reminisce. Celebrate 25 Years.</p>
             <p className="mt-4 max-w-xl text-lg leading-8 text-slate-600">
