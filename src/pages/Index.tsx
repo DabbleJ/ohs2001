@@ -253,20 +253,20 @@ const Index = () => {
             <div className="relative">
               <BearMark className="absolute -right-4 -top-5 h-24 w-32 rotate-6 text-[#003B7A]/10" />
               <div className="overflow-hidden rounded-[2rem] border-8 border-white bg-white shadow-2xl shadow-blue-950/15">
-                <div className="relative aspect-[3/2]">
+                <div className="aspect-[3/2]">
                   <img src="/assets/ohs-class-2001-hero-photo.png" alt="Olympia High School Class of 2001 yearbook group photo" className="h-full w-full object-cover" />
-                  <div className="absolute bottom-4 left-4 right-4 rounded-3xl bg-[#003B7A]/90 p-4 text-white backdrop-blur-sm sm:left-auto sm:w-72">
-                    <p className="text-xs font-black uppercase tracking-[0.2em] text-blue-100">Live countdown</p>
-                    <div className="mt-3 grid grid-cols-4 gap-2 text-center">
-                      {Object.entries(countdown).map(([label, value]) => (
-                        <div key={label} className="rounded-2xl bg-white/12 p-2 ring-1 ring-white/20">
-                          <span className="block text-2xl font-black">{String(value).padStart(2, "0")}</span>
-                          <span className="text-[0.65rem] font-bold uppercase text-blue-100">{label}</span>
-                        </div>
-                      ))}
-                    </div>
-                    <p className="mt-3 text-sm font-semibold text-blue-50">Until Saturday, July 25, 2026</p>
+                </div>
+                <div className="bg-[#003B7A] p-5 text-white sm:p-6">
+                  <p className="text-xs font-black uppercase tracking-[0.2em] text-blue-100">Live countdown</p>
+                  <div className="mt-3 grid grid-cols-4 gap-2 text-center">
+                    {Object.entries(countdown).map(([label, value]) => (
+                      <div key={label} className="rounded-2xl bg-white/12 p-2 ring-1 ring-white/20">
+                        <span className="block text-2xl font-black">{String(value).padStart(2, "0")}</span>
+                        <span className="text-[0.65rem] font-bold uppercase text-blue-100">{label}</span>
+                      </div>
+                    ))}
                   </div>
+                  <p className="mt-3 text-sm font-semibold text-blue-50">Until Saturday, July 25, 2026</p>
                 </div>
               </div>
             </div>
