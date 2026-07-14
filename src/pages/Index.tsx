@@ -45,7 +45,7 @@ const navItems = [
 const schedule = [
   {
     date: "Friday, July 24",
-    title: "Friday Night Meet-Up",
+    title: "Friday Night Meet-Up at the BroHo",
     location: "Brotherhood Lounge",
     address: "119 Capitol Way N, Olympia, WA 98501",
     time: "8:00 PM",
@@ -96,7 +96,7 @@ const faqs = [
   ["Can I bring my family?", "Families are welcome at Saturday morning’s picnic."],
   ["Is the dinner adults only?", "Yes."],
   ["Will there be a cash bar?", "Yes."],
-  ["Can I buy tickets at the door?", "Advance purchase is highly encouraged."],
+  ["Can I buy tickets at the door?", "Advance ticket purchase is highly encouraged. Tickets will be available at the door for $70."],
   ["What should I wear?", "Dressy, casual, or your best 90s outfit—whatever feels like you."],
 ];
 
@@ -344,7 +344,7 @@ const Index = () => {
               <CardContent className="p-7 sm:p-8">
                 <p className="text-sm font-black uppercase tracking-[0.2em] text-[#2E7ACB]">Ticket Pricing</p>
                 <h3 className="mt-2 text-3xl font-black text-[#062B55]">Early Pricing</h3>
-                <p className="mt-1 font-bold text-slate-500">Through Wednesday, July 22</p>
+                <p className="mt-1 font-bold text-slate-500">Through Saturday, July 18th</p>
                 <div className="my-7 rounded-[1.5rem] bg-[#F7FAFD] p-6 text-center ring-1 ring-[#D8E2EE]">
                   <p className="text-5xl font-black text-[#003B7A]">$60</p>
                   <p className="mt-1 font-bold text-slate-600">per person</p>
@@ -403,12 +403,7 @@ const Index = () => {
 
       <section className="bg-[#F7FAFD] py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Reveal className="text-center">
-            <p className="text-sm font-black uppercase tracking-[0.24em] text-[#2E7ACB]">Nostalgia Lane</p>
-            <h2 className="mt-3 text-4xl font-black tracking-tight text-[#062B55] sm:text-5xl">Class of 2001 Memories</h2>
-            <p className="mt-4 text-lg text-slate-600">A look back at our senior year and school days together.</p>
-          </Reveal>
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
             {nostalgicPhotos.map((photo, index) => (
               <Reveal key={index}>
                 <div className="group overflow-hidden rounded-[2rem] bg-white p-3 shadow-lg shadow-slate-200/50 ring-1 ring-slate-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
@@ -449,10 +444,10 @@ const Index = () => {
             </div>
             <div>
               <p className="text-sm font-black uppercase tracking-[0.22em] text-blue-100">Questions?</p>
-              <a href="mailto:heatherdanehoffman@gmail.com" className="mt-2 block text-2xl font-black hover:text-blue-100">heatherdanehoffman@gmail.com</a>
+              <a href="mailto:melanie.golob@gmail.com" className="mt-2 block text-2xl font-black hover:text-blue-100">melanie.golob@gmail.com</a>
             </div>
           </div>
-          <p className="max-w-md text-lg font-bold leading-8 text-blue-50">We can’t wait to celebrate 25 years together. See you in Olympia!</p>
+          <p className="max-w-md text-lg font-bold leading-8 text-blue-50">We can’t wait to celebrate 25 years together. See you in Oly!</p>
         </div>
       </footer>
     </main>
