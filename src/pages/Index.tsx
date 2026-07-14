@@ -75,7 +75,7 @@ const activities = [
 const nostalgicPhotos = [
   { src: "/assets/class-photo-9529.jpeg", alt: "Class of 2001 yearbook candid" },
   { src: "/assets/class-photo-9527.jpeg", alt: "Class of 2001 yearbook memory" },
-  { src: "/assets/class-photo-9525.jpeg", alt: "Olympia High School Class of 2001 photo" },
+  { src: "/assets/class-photo-9530.jpeg", alt: "Olympia High School Class of 2001 yearbook group photo" },
   { src: "/assets/class-photo-9524.jpeg", alt: "Class of 2001 school-days snapshot" },
   { src: "/assets/class-photo-9523.jpeg", alt: "OHS Class of 2001 nostalgic photo" },
 ];
@@ -253,7 +253,7 @@ const Index = () => {
               <BearMark className="absolute -right-4 -top-5 h-24 w-32 rotate-6 text-[#003B7A]/10" />
               <div className="overflow-hidden rounded-[2rem] border-8 border-white bg-white shadow-2xl shadow-blue-950/15">
                 <div className="relative aspect-[4/3] sm:aspect-[16/11]">
-                  <img src="/assets/class-photo-9530.jpeg" alt="Olympia High School Class of 2001 yearbook group photo" className="h-full w-full object-cover" />
+                  <img src="/assets/class-photo-9525.jpeg" alt="Olympia High School Class of 2001 group photo" className="h-full w-full object-cover" />
                   <div className="absolute bottom-4 left-4 right-4 rounded-3xl bg-[#003B7A]/90 p-4 text-white backdrop-blur-sm sm:left-auto sm:w-72">
                     <p className="text-xs font-black uppercase tracking-[0.2em] text-blue-100">Live countdown</p>
                     <div className="mt-3 grid grid-cols-4 gap-2 text-center">
