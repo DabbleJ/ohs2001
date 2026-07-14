@@ -254,9 +254,6 @@ const Index = () => {
               <div className="overflow-hidden rounded-[2rem] border-8 border-white bg-white shadow-2xl shadow-blue-950/15">
                 <div className="relative aspect-[4/3] sm:aspect-[16/11]">
                   <img src="/assets/class-photo-9530.jpeg" alt="Olympia High School Class of 2001 yearbook group photo" className="h-full w-full object-cover" />
-                  <div className="absolute left-4 top-4 rounded-full bg-white/90 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#003B7A] shadow-lg backdrop-blur-sm">
-                    Real class photo
-                  </div>
                   <div className="absolute bottom-4 left-4 right-4 rounded-3xl bg-[#003B7A]/90 p-4 text-white backdrop-blur-sm sm:left-auto sm:w-72">
                     <p className="text-xs font-black uppercase tracking-[0.2em] text-blue-100">Live countdown</p>
                     <div className="mt-3 grid grid-cols-4 gap-2 text-center">
@@ -389,7 +386,7 @@ const Index = () => {
       </section>
 
       <section className="bg-white py-20">
-        <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="h-full rounded-[2rem] border border-[#D8E2EE] bg-white p-8 shadow-xl shadow-slate-200/70">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-[#EAF2FB] text-[#003B7A]"><Shirt className="h-7 w-7" /></div>
@@ -398,19 +395,6 @@ const Index = () => {
               <p className="mt-3 text-xl font-bold text-slate-500">—or—</p>
               <p className="mt-3 text-2xl font-black text-slate-700">Wear your favorite 90s look.</p>
               <p className="mt-6 rounded-3xl bg-[#003B7A] p-5 text-lg font-black text-white">And because this is Olympia… Grunge is always welcome.</p>
-            </div>
-          </Reveal>
-          <Reveal>
-            <div className="relative h-full overflow-hidden rounded-[2rem] bg-[#F7FAFD] p-8 shadow-xl shadow-slate-200/70 ring-1 ring-[#D8E2EE]">
-              <BearMark className="absolute -right-8 -top-7 h-40 w-52 text-[#003B7A]/8" />
-              <div className="relative grid gap-7 sm:grid-cols-[1fr_0.85fr] sm:items-center">
-                <div>
-                  <Badge className="rounded-full bg-[#003B7A] px-4 py-2 text-white hover:bg-[#003B7A]">Bonus!</Badge>
-                  <h2 className="mt-5 text-4xl font-black text-[#062B55]">Commemorative Mug</h2>
-                  <p className="mt-4 text-lg leading-8 text-slate-600">Every pre-purchased ticket includes a limited-edition Olympia High School Class of 2001 commemorative mug while supplies last.</p>
-                </div>
-                <img src="/assets/class-photo-9530.jpeg" alt="Class of 2001 yearbook group photo" className="mx-auto max-h-72 rounded-[1.5rem] object-cover shadow-xl shadow-blue-950/10" />
-              </div>
             </div>
           </Reveal>
         </div>
@@ -459,7 +443,9 @@ const Index = () => {
       <footer className="bg-[#062B55] py-14 text-white">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 md:grid-cols-[1fr_auto] md:items-center lg:px-8">
           <div className="flex gap-4">
-            <img src="/assets/reunion-badge.png" alt="OHS reunion badge" className="h-16 w-16 rounded-3xl object-cover" />
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white/10 ring-1 ring-white/15">
+              <BearMark className="h-11 w-14 text-white" />
+            </div>
             <div>
               <p className="text-sm font-black uppercase tracking-[0.22em] text-blue-100">Questions?</p>
               <a href="mailto:heatherdanehoffman@gmail.com" className="mt-2 block text-2xl font-black hover:text-blue-100">heatherdanehoffman@gmail.com</a>
