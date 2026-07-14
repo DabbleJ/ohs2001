@@ -72,6 +72,14 @@ const activities = [
   { label: "Merchandise", icon: Gift },
 ];
 
+const nostalgicPhotos = [
+  { src: "/assets/class-photo-9529.jpeg", alt: "Class of 2001 yearbook candid" },
+  { src: "/assets/class-photo-9527.jpeg", alt: "Class of 2001 yearbook memory" },
+  { src: "/assets/class-photo-9525.jpeg", alt: "Olympia High School Class of 2001 photo" },
+  { src: "/assets/class-photo-9524.jpeg", alt: "Class of 2001 school-days snapshot" },
+  { src: "/assets/class-photo-9523.jpeg", alt: "OHS Class of 2001 nostalgic photo" },
+];
+
 const included = [
   { label: "Catered dinner by Octapas", icon: Utensils },
   { label: "Class of 2001 trivia", icon: Sparkles },
@@ -245,7 +253,10 @@ const Index = () => {
               <BearMark className="absolute -right-4 -top-5 h-24 w-32 rotate-6 text-[#003B7A]/10" />
               <div className="overflow-hidden rounded-[2rem] border-8 border-white bg-white shadow-2xl shadow-blue-950/15">
                 <div className="relative aspect-[4/3] sm:aspect-[16/11]">
-                  <img src="/assets/ohs-2001-hero.png" alt="OHS Class of 2001 yearbook-inspired class photo" className="h-full w-full object-cover" />
+                  <img src="/assets/class-photo-9530.jpeg" alt="Olympia High School Class of 2001 yearbook group photo" className="h-full w-full object-cover" />
+                  <div className="absolute left-4 top-4 rounded-full bg-white/90 px-4 py-2 text-xs font-black uppercase tracking-[0.18em] text-[#003B7A] shadow-lg backdrop-blur-sm">
+                    Real class photo
+                  </div>
                   <div className="absolute bottom-4 left-4 right-4 rounded-3xl bg-[#003B7A]/90 p-4 text-white backdrop-blur-sm sm:left-auto sm:w-72">
                     <p className="text-xs font-black uppercase tracking-[0.2em] text-blue-100">Live countdown</p>
                     <div className="mt-3 grid grid-cols-4 gap-2 text-center">
@@ -398,10 +409,31 @@ const Index = () => {
                   <h2 className="mt-5 text-4xl font-black text-[#062B55]">Commemorative Mug</h2>
                   <p className="mt-4 text-lg leading-8 text-slate-600">Every pre-purchased ticket includes a limited-edition Olympia High School Class of 2001 commemorative mug while supplies last.</p>
                 </div>
-                <img src="/assets/reunion-mug.png" alt="Class of 2001 commemorative mug mockup" className="mx-auto max-h-72 rounded-[1.5rem] object-cover shadow-xl shadow-blue-950/10" />
+                <img src="/assets/class-photo-9530.jpeg" alt="Class of 2001 yearbook group photo" className="mx-auto max-h-72 rounded-[1.5rem] object-cover shadow-xl shadow-blue-950/10" />
               </div>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="bg-[#F7FAFD] py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal className="text-center">
+            <p className="text-sm font-black uppercase tracking-[0.24em] text-[#2E7ACB]">Nostalgia Lane</p>
+            <h2 className="mt-3 text-4xl font-black tracking-tight text-[#062B55] sm:text-5xl">Class of 2001 Memories</h2>
+            <p className="mt-4 text-lg text-slate-600">A look back at our senior year and school days together.</p>
+          </Reveal>
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+            {nostalgicPhotos.map((photo, index) => (
+              <Reveal key={index}>
+                <div className="group overflow-hidden rounded-[2rem] bg-white p-3 shadow-lg shadow-slate-200/50 ring-1 ring-slate-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                  <div className="overflow-hidden rounded-[1.5rem] aspect-[4/3]">
+                    <img src={photo.src} alt={photo.alt} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+                  </div>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
