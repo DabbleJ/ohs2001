@@ -9,7 +9,6 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { toast } from "sonner";
 import {
   Baby,
   Beer,
@@ -34,13 +33,13 @@ import {
 } from "lucide-react";
 
 const reunionDate = new Date("2026-07-25T17:00:00-07:00").getTime();
+const ticketFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLScEmDaUaIoKLYH77QzMGUI_ErfDlNf4MirAOsuXwsi9UtWlsw/viewform";
 
 const navItems = [
   { label: "Schedule", href: "#schedule" },
   { label: "Tickets", href: "#tickets" },
   { label: "Included", href: "#included" },
   { label: "FAQ", href: "#faq" },
-  { label: "Gallery", href: "#gallery" },
 ];
 
 const schedule = [
@@ -153,49 +152,17 @@ function BearMark({ className = "" }: { className?: string }) {
   );
 }
 
-function Confetti({ active }: { active: boolean }) {
-  if (!active) return null;
-
-  return (
-    <div className="pointer-events-none fixed inset-0 z-[80] overflow-hidden" aria-hidden="true">
-      {Array.from({ length: 34 }).map((_, index) => (
-        <span
-          key={index}
-          className="confetti-piece"
-          style={{
-            left: `${(index * 29) % 100}%`,
-            animationDelay: `${(index % 8) * 0.08}s`,
-            backgroundColor: ["#003B7A", "#F8FAFC", "#AAB5C4", "#2E7ACB"][index % 4],
-          }}
-        />
-      ))}
-    </div>
-  );
-}
-
 const Index = () => {
   const countdown = useCountdown();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [confetti, setConfetti] = useState(false);
 
   const scrollTo = (href: string) => {
     document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
     setMenuOpen(false);
   };
 
-  const handleTicketPlaceholder = () => {
-    scrollTo("#tickets");
-    setConfetti(true);
-    toast("Ticket checkout placeholder", {
-      description: "Payment integration will be connected when ticket sales open.",
-    });
-    window.setTimeout(() => setConfetti(false), 1800);
-  };
-
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      <Confetti active={confetti} />
-
       <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/70 bg-white/90 shadow-sm backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
           <button onClick={() => scrollTo("#home")} className="flex items-center gap-3 text-left" aria-label="Go to top">
@@ -216,8 +183,8 @@ const Index = () => {
                 {item.label}
               </button>
             ))}
-            <Button onClick={() => scrollTo("#tickets")} className="ml-2 rounded-full bg-[#003B7A] px-5 font-black text-white shadow-lg shadow-blue-950/15 hover:bg-[#07549E]">
-              Buy Tickets
+            <Button asChild className="ml-2 rounded-full bg-[#003B7A] px-5 font-black text-white shadow-lg shadow-blue-950/15 hover:bg-[#07549E]">
+              <a href={ticketFormUrl} target="_blank" rel="noreferrer">Buy Tickets</a>
             </Button>
           </div>
 
@@ -237,8 +204,8 @@ const Index = () => {
                   {item.label}
                 </button>
               ))}
-              <Button onClick={() => scrollTo("#tickets")} className="rounded-2xl bg-[#003B7A] py-6 font-black text-white hover:bg-[#07549E]">
-                Buy Tickets
+              <Button asChild className="rounded-2xl bg-[#003B7A] py-6 font-black text-white hover:bg-[#07549E]">
+                <a href={ticketFormUrl} target="_blank" rel="noreferrer" onClick={() => setMenuOpen(false)}>Buy Tickets</a>
               </Button>
             </div>
           </div>
@@ -262,8 +229,10 @@ const Index = () => {
               It’s been 25 years since graduation. Join classmates for a weekend of catching up, sharing memories, and making new ones.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button onClick={() => scrollTo("#tickets")} className="rounded-full bg-[#003B7A] px-7 py-6 text-base font-black text-white shadow-xl shadow-blue-950/20 hover:bg-[#07549E]">
-                Purchase Reunion Dinner Tickets <ChevronRight className="ml-1 h-5 w-5" />
+              <Button asChild className="rounded-full bg-[#003B7A] px-7 py-6 text-base font-black text-white shadow-xl shadow-blue-950/20 hover:bg-[#07549E]">
+                <a href={ticketFormUrl} target="_blank" rel="noreferrer">
+                  Purchase Reunion Dinner Tickets <ChevronRight className="ml-1 h-5 w-5" />
+                </a>
               </Button>
               <Button onClick={() => scrollTo("#schedule")} variant="outline" className="rounded-full border-[#B8C6D8] bg-white px-7 py-6 text-base font-black text-[#003B7A] hover:bg-[#EAF2FB]">
                 View Weekend Schedule
@@ -373,10 +342,11 @@ const Index = () => {
                   <div className="my-4 flex items-center gap-3 text-xs font-black uppercase tracking-[0.2em] text-slate-400"><span className="h-px flex-1 bg-slate-200" />or<span className="h-px flex-1 bg-slate-200" /></div>
                   <p className="text-3xl font-black text-[#062B55]">2 Tickets for $110</p>
                 </div>
-                <Button onClick={handleTicketPlaceholder} className="w-full rounded-full bg-[#003B7A] py-7 text-lg font-black text-white shadow-xl shadow-blue-950/20 hover:bg-[#07549E]">
-                  Buy Tickets <PartyPopper className="ml-2 h-5 w-5" />
+                <Button asChild className="w-full rounded-full bg-[#003B7A] py-7 text-lg font-black text-white shadow-xl shadow-blue-950/20 hover:bg-[#07549E]">
+                  <a href={ticketFormUrl} target="_blank" rel="noreferrer">
+                    Buy Tickets <PartyPopper className="ml-2 h-5 w-5" />
+                  </a>
                 </Button>
-                <p className="mt-4 text-center text-sm font-semibold text-slate-500">Payment integration placeholder.</p>
               </CardContent>
             </Card>
           </Reveal>
@@ -454,48 +424,13 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="gallery" className="bg-white py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Reveal className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-            <div>
-              <p className="text-sm font-black uppercase tracking-[0.24em] text-[#2E7ACB]">Memory Gallery</p>
-              <h2 className="mt-3 text-4xl font-black tracking-tight text-[#062B55] sm:text-5xl">Then & Now</h2>
-              <p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600">A place for yearbook memories, old snapshots, and current-day photos as reunion weekend gets closer.</p>
-            </div>
-            <Button onClick={() => toast("Photo submission placeholder", { description: "Upload functionality can be connected later." })} className="rounded-full bg-[#003B7A] px-7 py-6 font-black text-white hover:bg-[#07549E]">
-              Submit Your Photos
-            </Button>
-          </Reveal>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {["Yearbook throwbacks", "Downtown Olympia", "Senior year snapshots", "Reunion weekend"].map((title, index) => (
-              <Reveal key={title}>
-                <div className="group overflow-hidden rounded-[2rem] bg-[#F7FAFD] shadow-lg shadow-slate-200/70 ring-1 ring-slate-100">
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <img
-                      src={index === 0 ? "/assets/ohs-2001-hero.png" : "/assets/bear-pattern.png"}
-                      alt={`${title} placeholder`}
-                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-[#003B7A]/10" />
-                  </div>
-                  <div className="p-5">
-                    <p className="text-xs font-black uppercase tracking-[0.2em] text-[#2E7ACB]">Then & Now</p>
-                    <h3 className="mt-1 text-xl font-black text-[#062B55]">{title}</h3>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <footer className="bg-[#062B55] py-14 text-white">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 md:grid-cols-[1fr_auto] md:items-center lg:px-8">
           <div className="flex gap-4">
             <img src="/assets/reunion-badge.png" alt="OHS reunion badge" className="h-16 w-16 rounded-3xl object-cover" />
             <div>
               <p className="text-sm font-black uppercase tracking-[0.22em] text-blue-100">Questions?</p>
-              <a href="mailto:reunion@email.com" className="mt-2 block text-2xl font-black hover:text-blue-100">reunion@email.com</a>
+              <a href="mailto:heatherdanehoffman@gmail.com" className="mt-2 block text-2xl font-black hover:text-blue-100">heatherdanehoffman@gmail.com</a>
               <a href="#" className="mt-2 inline-block font-bold text-blue-100 hover:text-white">Facebook Group (placeholder)</a>
             </div>
           </div>
