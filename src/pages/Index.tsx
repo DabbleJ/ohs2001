@@ -449,7 +449,6 @@ const Index = () => {
             <div>
               <p className="text-sm font-black uppercase tracking-[0.22em] text-blue-100">Questions?</p>
               <a href="mailto:heatherdanehoffman@gmail.com" className="mt-2 block text-2xl font-black hover:text-blue-100">heatherdanehoffman@gmail.com</a>
-              <a href="#" className="mt-2 inline-block font-bold text-blue-100 hover:text-white">Facebook Group (placeholder)</a>
             </div>
           </div>
           <p className="max-w-md text-lg font-bold leading-8 text-blue-50">We can’t wait to celebrate 25 years together. See you in Olympia!</p>
