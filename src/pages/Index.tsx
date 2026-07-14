@@ -342,7 +342,7 @@ const Index = () => {
             <Card id="tickets" className="scroll-mt-28 rounded-[2rem] border-white/20 bg-white text-slate-900 shadow-2xl shadow-blue-950/30">
               <CardContent className="p-7 sm:p-8">
                 <p className="text-sm font-black uppercase tracking-[0.2em] text-[#2E7ACB]">Ticket Pricing</p>
-                <h3 className="mt-2 text-3xl font-black text-[#062B55]">Early Pricing</h3>
+                <h3 className="mt-2 text-3xl font-black text-[#062B55]">Flash Sale!</h3>
                 <p className="mt-1 font-bold text-slate-500">Through Saturday, July 18th</p>
                 <div className="my-7 rounded-[1.5rem] bg-[#F7FAFD] p-6 text-center ring-1 ring-[#D8E2EE]">
                   <p className="text-5xl font-black text-[#003B7A]">$60</p>
