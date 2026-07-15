@@ -45,11 +45,11 @@ const navItems = [
 const schedule = [
   {
     date: "Friday, July 24",
-    title: "Friday Night Meet-Up at the BroHo",
-    location: "Brotherhood Lounge",
-    address: "119 Capitol Way N, Olympia, WA 98501",
+    title: "Friday Night Meet-Up at Capitol Tavern",
+    location: "Capitol Tavern",
+    address: "106 4th Ave NW, Olympia, WA",
     time: "8:00 PM",
-    copy: "Already in town? Kick off reunion weekend with drinks, pool, and casual conversation before Saturday’s festivities.",
+    copy: "Already in town? Kick off reunion weekend at Oly’s newest bar, opened just last month by Mark Simmonds, OHS Class of 2002.",
     icon: Beer,
   },
   {
@@ -440,10 +440,6 @@ const Index = () => {
           <div className="flex gap-4">
             <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-3xl bg-white/10 ring-1 ring-white/15">
               <BearMark className="h-11 w-14 text-white" />
-            </div>
-            <div>
-              <p className="text-sm font-black uppercase tracking-[0.22em] text-blue-100">Questions?</p>
-              <a href="mailto:melanie.golob@gmail.com" className="mt-2 block text-2xl font-black hover:text-blue-100">melanie.golob@gmail.com</a>
             </div>
           </div>
           <p className="max-w-md text-lg font-bold leading-8 text-blue-50">We can’t wait to celebrate 25 years together. See you in Oly!</p>
