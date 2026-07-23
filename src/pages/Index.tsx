@@ -82,12 +82,12 @@ const nostalgicPhotos = [
 ];
 
 const included = [
-  { label: "Catered dinner by Octapas", icon: Utensils },
+  { label: "Reunion celebration access", icon: Utensils },
   { label: "Class of 2001 trivia", icon: Sparkles },
   { label: "Prizes & giveaways", icon: Trophy },
   { label: "Favorite 90s music", icon: Music2 },
   { label: "Cash bar", icon: GlassWater },
-  { label: "Great food", icon: HeartHandshake },
+  { label: "Time to reconnect", icon: HeartHandshake },
   { label: "Great company", icon: PartyPopper },
   { label: "Plenty of memories", icon: Camera },
 ];
@@ -96,7 +96,7 @@ const faqs = [
   ["Can I bring my family?", "Families are welcome at Saturday morning’s picnic."],
   ["Is the dinner adults only?", "Yes."],
   ["Will there be a cash bar?", "Yes."],
-  ["Can I buy tickets at the door?", "Advance ticket purchase is highly encouraged. Tickets will be available at the door for $70."],
+  ["Can I buy tickets at the door?", "Yes. Reunion tickets will be available at the door for $30. Dinner is not included."],
   ["What should I wear?", "Dressy, casual, or your best 90s outfit—whatever feels like you."],
 ];
 
@@ -239,7 +239,7 @@ const Index = () => {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button asChild className="rounded-full bg-[#003B7A] px-7 py-6 text-base font-black text-white shadow-xl shadow-blue-950/20 hover:bg-[#07549E]">
                 <a href={ticketFormUrl} target="_blank" rel="noreferrer">
-                  Purchase Reunion Dinner Tickets <ChevronRight className="ml-1 h-5 w-5" />
+                  Purchase Reunion Tickets <ChevronRight className="ml-1 h-5 w-5" />
                 </a>
               </Button>
               <Button onClick={() => scrollTo("#schedule")} variant="outline" className="rounded-full border-[#B8C6D8] bg-white px-7 py-6 text-base font-black text-[#003B7A] hover:bg-[#EAF2FB]">
@@ -330,7 +330,7 @@ const Index = () => {
         <BearMark className="absolute -right-10 top-10 h-56 w-72 text-white/5" />
         <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[1fr_0.82fr] lg:px-8">
           <Reveal>
-            <Badge className="rounded-full bg-white px-4 py-2 text-[#003B7A] hover:bg-white">Adults Only • Ticketed Event</Badge>
+            <Badge className="rounded-full bg-white px-4 py-2 text-[#003B7A] hover:bg-white">Dinner Sold Out • Reunion Tickets Available</Badge>
             <h2 className="mt-5 text-4xl font-black tracking-tight sm:text-6xl">25th Reunion Dinner</h2>
             <div className="mt-7 grid gap-4 text-blue-50 sm:grid-cols-2">
               <p className="flex gap-3"><MapPin className="mt-0.5 h-5 w-5 shrink-0 text-white" /><span><strong className="text-white">The Heritage Room</strong><br />604 Water St SW<br />Olympia, WA 98501</span></p>
@@ -341,18 +341,18 @@ const Index = () => {
           <Reveal>
             <Card id="tickets" className="scroll-mt-28 rounded-[2rem] border-white/20 bg-white text-slate-900 shadow-2xl shadow-blue-950/30">
               <CardContent className="p-7 sm:p-8">
-                <p className="text-sm font-black uppercase tracking-[0.2em] text-[#2E7ACB]">Ticket Pricing</p>
-                <h3 className="mt-2 text-3xl font-black text-[#062B55]">Flash Sale!</h3>
-                <p className="mt-1 font-bold text-slate-500">Through Saturday, July 18th</p>
+                <p className="text-sm font-black uppercase tracking-[0.2em] text-[#2E7ACB]">Ticket Update</p>
+                <h3 className="mt-2 text-3xl font-black text-[#062B55]">Dinner is sold out</h3>
+                <p className="mt-2 font-bold leading-6 text-slate-600">Reunion tickets are still available without dinner through Friday, July 24th.</p>
                 <div className="my-7 rounded-[1.5rem] bg-[#F7FAFD] p-6 text-center ring-1 ring-[#D8E2EE]">
-                  <p className="text-5xl font-black text-[#003B7A]">$60</p>
-                  <p className="mt-1 font-bold text-slate-600">per person</p>
-                  <div className="my-4 flex items-center gap-3 text-xs font-black uppercase tracking-[0.2em] text-slate-400"><span className="h-px flex-1 bg-slate-200" />or<span className="h-px flex-1 bg-slate-200" /></div>
-                  <p className="text-3xl font-black text-[#062B55]">2 Tickets for $110</p>
+                  <p className="text-5xl font-black text-[#003B7A]">$25</p>
+                  <p className="mt-1 font-bold text-slate-600">per person through Friday, July 24th</p>
+                  <div className="my-4 flex items-center gap-3 text-xs font-black uppercase tracking-[0.2em] text-slate-400"><span className="h-px flex-1 bg-slate-200" />at the door<span className="h-px flex-1 bg-slate-200" /></div>
+                  <p className="text-3xl font-black text-[#062B55]">$30 per person</p>
                 </div>
                 <Button asChild className="w-full rounded-full bg-[#003B7A] py-7 text-lg font-black text-white shadow-xl shadow-blue-950/20 hover:bg-[#07549E]">
                   <a href={ticketFormUrl} target="_blank" rel="noreferrer">
-                    Buy Tickets <PartyPopper className="ml-2 h-5 w-5" />
+                    Buy Reunion Tickets <PartyPopper className="ml-2 h-5 w-5" />
                   </a>
                 </Button>
               </CardContent>
